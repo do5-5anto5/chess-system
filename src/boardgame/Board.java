@@ -12,22 +12,19 @@ public class Board {
 		pieces = new Piece[rows][collums];
 	}
 
-	protected int getRow() {
+	public int getRow() {
 		return rows;
 	}
 
-	protected void setRow(int row) {
+	public void setRow(int row) {
 		this.rows = row;
 	}
 
-	protected int getCollum() {
+	public int getCollum() {
 		return collums;
 	}
 
-	protected void setCollum(int collum) {
+	public void setCollum(int collum) {
 		this.collums = collum;
 	}
-	
-	
-	
 }
