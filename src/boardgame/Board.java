@@ -3,28 +3,36 @@ package boardgame;
 public class Board {
 	
 	private int rows;
-	private int collums;
+	private int columns;
 	private Piece[][] pieces;
 	
-	public Board(int row, int collum) {
-		this.rows = row;
-		this.collums = collum;
-		pieces = new Piece[rows][collums];
+	public Board(int rows, int columns) {
+		this.rows = rows;
+		this.columns = columns ;
+		pieces = new Piece[rows][columns];
 	}
 
-	public int getRow() {
+	public int getRows() {
 		return rows;
 	}
 
-	public void setRow(int row) {
-		this.rows = row;
+	public void setRows(int rows) {
+		this.rows = rows;
 	}
 
-	public int getCollum() {
-		return collums;
+	public int getColumns() {
+		return columns;
 	}
 
-	public void setCollum(int collum) {
-		this.collums = collum;
+	public void setColumns(int columns) {
+		this.columns = columns;
+	}
+	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
 	}
 }
